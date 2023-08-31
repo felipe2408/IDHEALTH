@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "5258494e-571c-43cb-9750-47355e5bc823",
+		"name": "IDHEALTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23227903"
+	},
+	"item": [
+		{
+			"name": "Collection Person",
+			"item": [
+				{
+					"name": "Create Person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Andres\",\r\n  \"lastName\": \"Perez\",\r\n  \"identificationNumber\": \"9875452\",\r\n  \"email\" : \"andres@gmail.com\",\r\n  \"password\" : \"test5885554\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://idhealth.azurewebsites.net/api/Person/Create"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All People",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://idhealth.azurewebsites.net/api/Person/GetAllPerson"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Person",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Andres\",\r\n  \"lastName\": \"Giron\",\r\n  \"identificationNumber\": \"785426\",\r\n  \"email\" : \"andresperez2@gmail.com\",\r\n  \"password\" : \"test5885554\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://idhealth.azurewebsites.net/api/Person/64eff86b14651ed20544414a",
+							"protocol": "https",
+							"host": [
+								"idhealth",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Person",
+								"64eff86b14651ed20544414a"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64eff86b14651ed20544414a",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Collection Store",
+			"item": [
+				{
+					"name": "Get All Store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://idhealth.azurewebsites.net/api/Store/GetAll"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"Name\" :\"Samsung\",\r\n    \"City\" : \"Madrid\",\r\n    \"State\" : \"Cundinamarca\",\r\n    \"NIT\" : \"1252525\",\r\n    \"Address\" :\"CRA 9#22-2\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7016/api/Store/Create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"Name\" :\"Samsung SAS\",\r\n    \"City\" : \"Madrid\",\r\n    \"State\" : \"Cundinamarca\",\r\n    \"NIT\" : \"1252525\",\r\n    \"Address\" :\"CRA 9#22-2\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7016/api/Store/64f0d5735e598b0da93032ff"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Collection Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Brand\" :\"Zenu\",\r\n    \"Name\" : \"Salchichas\",\r\n    \"Category\": \"Embutidos\",\r\n    \"Price\" : \"7.800\",\r\n    \"ExpiryDate\": \"2022-08-22\",\r\n    \"MadeBy\":\"Colombia\",\r\n    \"Description\": \"Salchichas embutidas ultra procesadas\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://idhealth.azurewebsites.net/api/Product/Create"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://idhealth.azurewebsites.net/api/Product/GetAll"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Brand\" :\"Zenu\",\r\n    \"Name\" : \"Salchichas Embutidas\",\r\n    \"Category\": \"Embutidos\",\r\n    \"Price\" : \"7.800\",\r\n    \"ExpiryDate\": \"2022-08-22\",\r\n    \"MadeBy\":\"Colombia\",\r\n    \"Description\": \"Salchichas embutidas ultra procesadas\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://idhealth.azurewebsites.net/api/Product/64f0d74da1188de6a6cce654"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Collection Category",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://idhealth.azurewebsites.net/api/Category/GetAll"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" :\"Vehículo\",\r\n    \"Description\": \"Implementos para vehículos livianos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://idhealth.azurewebsites.net/api/Category/Create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" :\"Vehículo\",\r\n    \"Description\": \"Implementos para vehículos de carga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://idhealth.azurewebsites.net/api/Category/64f0cd62a01794e7ef9f665b"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
